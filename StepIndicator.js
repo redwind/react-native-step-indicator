@@ -175,7 +175,7 @@ export default class StepIndicator extends PureComponent {
         return (
           <TouchableWithoutFeedback style={styles.stepLabelItem} key={index} onPress={() => this.stepPressed(index)}>
             <View style={styles.stepLabelItem}>
-              <Text style={[styles.stepLabel,selectedStepLabelStyle , { fontSize: this.state.customStyles.labelSize },this.state.customStyle.labelStyle]}>
+              <Text style={[styles.stepLabel,selectedStepLabelStyle , { fontSize: this.state.customStyles.labelSize },this.state.customStyles.labelStyle]}>
                 {label}
               </Text>
             </View>
