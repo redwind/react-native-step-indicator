@@ -35,6 +35,7 @@ export default class StepIndicator extends PureComponent {
       stepIndicatorLabelUnFinishedColor: 'rgba(255,255,255,0.5)',
       labelColor: '#000000',
       labelSize: 13,
+      labelStyle:{},
       currentStepLabelColor: '#4aae4f'
     };
     const customStyles = Object.assign(defaultStyles, props.customStyles);
@@ -174,7 +175,7 @@ export default class StepIndicator extends PureComponent {
         return (
           <TouchableWithoutFeedback style={styles.stepLabelItem} key={index} onPress={() => this.stepPressed(index)}>
             <View style={styles.stepLabelItem}>
-              <Text style={[styles.stepLabel,selectedStepLabelStyle , { fontSize: this.state.customStyles.labelSize }]}>
+              <Text style={[styles.stepLabel,selectedStepLabelStyle , { fontSize: this.state.customStyles.labelSize },this.state.customStyle.labelStyle]}>
                 {label}
               </Text>
             </View>
